@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Cari Jawaban Ujian</title>
+    <title>Kunci Jawaban Ujian Arsiparis</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -16,15 +16,15 @@
 <body class="bg-slate-50 min-h-screen text-slate-800 flex flex-col justify-between">
 
     <header class="bg-indigo-600 text-white shadow-sm sticky top-0 z-10">
-        <div class="max-w-md mx-auto px-4 py-4 text-center">
-            <h1 class="text-base font-bold tracking-tight">Kunci Jawaban Ujian</h1>
-            <p class="text-indigo-200 text-xs mt-0.5">Ketik soal untuk melihat jawaban benar</p>
+        <div class="max-w-md mx-auto px-4 py-3.5 text-center">
+            <h1 class="text-sm font-bold tracking-tight">Kunci Jawaban Ujian Arsiparis</h1>
+            <p class="text-indigo-200 text-[11px] mt-0.5">Ketik soal untuk melihat jawaban benar secara instan</p>
         </div>
     </header>
 
-    <main class="max-w-md w-full mx-auto px-4 py-5 flex-grow">
+    <main class="max-w-md w-full mx-auto px-4 py-4 flex-grow">
         <!-- Search Input Box -->
-        <div class="relative mb-5">
+        <div class="relative mb-4">
             <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none">
                 <svg class="h-5 w-5 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
@@ -33,8 +33,8 @@
             <input 
                 type="text" 
                 id="searchInput" 
-                placeholder="Ketik soal ujian..." 
-                class="w-full pl-11 pr-10 py-3.5 bg-white border border-slate-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 text-base transition-all"
+                placeholder="Ketik soal ujian di sini..." 
+                class="w-full pl-11 pr-10 py-3 bg-white border border-slate-300 rounded-xl shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 text-slate-800 text-sm transition-all"
                 autocomplete="off"
                 autofocus
             >
@@ -46,14 +46,14 @@
         </div>
 
         <!-- Initial instruction state -->
-        <div id="initialState" class="text-center py-12 px-4">
-            <div class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-indigo-50 text-indigo-500 mb-3">
-                <svg class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <div id="initialState" class="text-center py-10 px-4">
+            <div class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-indigo-50 text-indigo-500 mb-2.5">
+                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
             </div>
-            <h2 class="text-slate-700 font-medium text-sm">Mulai mengetik untuk mencari kunci jawaban</h2>
-            <p class="text-slate-400 text-xs mt-1">Jawaban benar akan muncul secara instan di bawah</p>
+            <h2 class="text-slate-700 font-medium text-xs">Mulai mengetik untuk mencari kunci jawaban</h2>
+            <p class="text-slate-400 text-[11px] mt-0.5">Jawaban benar akan muncul otomatis</p>
         </div>
 
         <!-- Results List Container -->
@@ -62,188 +62,243 @@
         </div>
 
         <!-- Empty / No match state -->
-        <div id="emptyState" class="hidden text-center py-10 px-4 bg-white rounded-xl border border-dashed border-slate-300">
-            <h3 class="text-slate-700 font-medium text-sm">Soal tidak ditemukan</h3>
-            <p class="text-slate-400 text-xs mt-1">Pastikan ejaan kata sesuai dengan naskah soal.</p>
+        <div id="emptyState" class="hidden text-center py-8 px-4 bg-white rounded-xl border border-dashed border-slate-300">
+            <h3 class="text-slate-700 font-medium text-xs">Soal tidak ditemukan</h3>
+            <p class="text-slate-400 text-[11px] mt-0.5">Pastikan ejaan kata sesuai dengan naskah soal.</p>
         </div>
     </main>
 
-    <footer class="bg-white border-t border-slate-200 py-3 text-center text-[11px] text-slate-400">
-        <p>Aplikasi Kunci Jawaban &bull; Mobile Optimized</p>
+    <footer class="bg-white border-t border-slate-200 py-2.5 text-center text-[10px] text-slate-400">
+        <p>Aplikasi Kunci Jawaban Arsiparis &bull; Mobile Optimized</p>
     </footer>
 
     <script>
-        // Exact raw dataset compiled from the provided source document
+        // Complete 45 dataset compiled from official document
         const qaData = [
             {
                 id: 1,
-                question: "Daftar arsip usul musnah sekurang-kurangnya berisi informasi berikut ini, kecuali ….",
-                answerText: "C: ringkasan arsip"
+                question: "Kebijakan alih media arsip meliputi beberapa metode, yaitu ....",
+                answerText: "B: pengkopian, konversi, migrasi"
             },
             {
                 id: 2,
-                question: "Arsip yang tercipta sebagai akibat pelaksanaan pemusnahan arsip oleh pencipta arsip diperlakukan sebagai ….",
-                answerText: "B: arsip vital"
+                question: "Pemeliharaan arsip dinamis dilakukan melalui kegiatan ....",
+                answerText: "A: pemberkasan arsip aktif, penataan arsip inaktif, penyimpanan dan alih media arsip"
             },
             {
                 id: 3,
-                question: "Dalam hal retensi inaktif suatu arsip telah habis atau terlampaui dan pada kolom keterangan JRA dinyatakan permanen, maka ….",
-                answerText: "A: arsip tersebut dikategorikan sebagai arsip usul serah"
+                question: "Arsip negara yang berkaitan dengan keberadaan dan kelangsungan hidup bangsa dan negara yang harus dijaga keutuhan, keamanan, dan keselamatannya merupakan arsip ....",
+                answerText: "B: arsip terjaga"
             },
             {
                 id: 4,
-                question: "Hal prinsip yang harus dilaksanakan ketika melaksanakan penyusutan arsip adalah ....",
-                answerText: "C: penilaian arsip"
+                question: "Berikut ini merupakan informasi yang paling banyak dimuat dalam daftar isi berkas, kecuali ....",
+                answerText: "D: retensi"
             },
             {
                 id: 5,
-                question: "Berikut ini yang bukan merupakan jenis arsip statis berdasarkan wilayah yuridiksi pencipta arsip (skala informasi)",
-                answerText: "A: tingkat perguruan tinggi"
+                question: "Cara-cara meningkatkan layanan unit kearsipan sebagai berikut, kecuali …",
+                answerText: "B: menerapkan legislasi yang komprehensif untuk mengatur siklus"
             },
             {
                 id: 6,
-                question: "Kegiatan menetralkan asam pada kertas yang dapat merusak dan memberi bahan penahan untuk melindungi kertas dari pengaruh asam yang berasal dari luar disebut ….",
-                answerText: "A: deasidifikasi"
+                question: "Berikut ini salah satu contoh arsip vital instansi pemerintah pusat dan daerah adalah ....",
+                answerText: "B: perjanjian kerja sama strategis"
             },
             {
                 id: 7,
-                question: "Untuk menunjukkan bahwa arsip hasil pindaian adalah asli dan sama dengan aslinya, dilakukan kegiatan ….",
-                answerText: "C: autentikasi arsip"
+                question: "Pemindaian arsip asli direkomendasikan untuk menggunakan resolusi minimum, yaitu ....",
+                answerText: "C: 300 dpi"
             },
             {
                 id: 8,
-                question: "Sumber arsip dalam rangka penelusuran arsip statis dapat mempertimbangkan dua hal, yaitu ….",
-                answerText: "C: pencipta arsip dan pemilik arsip"
+                question: "Pengelolaan dan penataan arsip inaktif dilakukan berdasarkan ....",
+                answerText: "C: asas asal usul dan asas aturan asli"
             },
             {
                 id: 9,
-                question: "Berikut ini merupakan pertimbangan dalam menetapkan tema pameran dalam rangka penyusunan katalog pameran, kecuali ….",
-                answerText: "C: tema pameran menggunakan Bahasa Inggris agar lebih menarik perhatian"
+                question: "Dalam kegiatan alih media kertas ke elektronik (digitalisasi), pemindaian dapat dilakukan dengan ....",
+                answerText: "A: alat pemindai"
             },
             {
                 id: 10,
-                question: "Penelusuran arsip statis dilaksanakan unit yang memiliki fungsi … arsip statis di lembaga kearsipan.",
-                answerText: "A: akuisisi"
+                question: "Kriteria arsip yang bernilai guna kebuktian (evidential) adalah ....",
+                answerText: "A: merupakan bukti dan informasi tentang kegiatan pokok organisasi"
             },
             {
                 id: 11,
-                question: "Berikut ini yang merupakan cara membersihkan fisik film, kecuali …",
-                answerText: "D: leafcasting"
+                question: "Pengertian Arsip Inaktif adalah ....",
+                answerText: "A: arsip yang frekuensi penggunaannya telah menurun"
             },
             {
                 id: 12,
-                question: "Tindakan terhadap hama atau organisme yang dapat merusak arsip dengan pengasapan yang bertujuan mencegah, mengobati dan mensterilkan bahan kearsipan dengan menggunakan senyawa kimia dalam ruang yang kedap gas udara pada suhu dan tekanan tertentu disebut...",
-                answerText: "D: fumigasi"
+                question: "Daftar arsip inaktif yang dipindahkan terdiri dari ….",
+                answerText: "C: daftar berkas dan daftar isi berkas"
             },
             {
                 id: 13,
-                question: "Bahan kimia yang digunakan untuk melakukan rewashing arsip film adalah ….",
-                answerText: "C: sodium polymetaphosphate"
+                question: "Di bawah ini yang Bukan merupakan tahapan dalam prosedur pelaksanaan alih media arsip adalah ....",
+                answerText: "A: memusnahkan arsip kertas yang telah dialih media"
             },
             {
                 id: 14,
-                question: "14. Rewashing arsip film dilakukan untuk ….",
-                answerText: "A: mengurangi noda pada permukaan film"
+                question: "Terhadap arsip statis yang dinyatakan tertutup, Kepala ANRI atau Pimpinan Lembaga Kearsipan sesuai lingkup kewenangannya dapat menyatakan arsip statis tersebut menjadi terbuka setelah melewati masa penyimpanan selama ....",
+                answerText: "B: 25 tahun"
             },
             {
                 id: 15,
-                question: "15 Dalam melakukan penelusuran arsip statis perseorangan dilakukan dengan menggunakan teknik ….",
-                answerText: "C: identifikasi sumber data dan identifikasi arsip"
+                question: "Pada penyusunan daftar arsip statis, kegiatan menggambarkan unit informasi arsip yang dapat mengacu pada standar yang berlaku secara nasional dan internasional disebut …. ",
+                answerText: "C: deskripsi arsip statis"
             },
             {
                 id: 16,
-                question: "16. Perbaikan arsip dengan cara melapisi arsip kertas dengan menggunakan plastik poliester adalah ….",
-                answerText: "C: enkapsulasi"
+                question: "Berikut ini ketahanan fisik media yang harus diperhatikan pada teknis penyimpanan arsip statis, kecuali ....",
+                answerText: "D: penataan arsip"
             },
             {
                 id: 17,
-                question: "Berikut ini adalah tahapan dalam melakukan pemindaian dan pengolahan arsip hasil pindaian dalam rangka pameran arsip, yaitu ….",
-                answerText: "A: identifikasi arsip sesuai tema - melakukan pemindaian arsip - melakukan autentikasi arsip hasil pindaian"
+                question: "Metode perbaikan arsip melalui proses mekanik dilakukan dengan menggunakan suspensi bubur kertas/pulp dalam air yang diisap melalui screen sebagai penyangga lembaran kertas sehingga bagian yang hilang dari lembaran kertas dapat diisi dengan serat selulosa, disebut ....",
+                answerText: "D: leafcasting"
             },
             {
                 id: 18,
-                question: "Dalam menyusun storyline pameran arsip statis harus mempertimbangkan beberapa aspek, yaitu ….",
-                answerText: "B: aspek sejarah yang akan diangkat, menerapkan principle of provenance, terdapat starting point dan ending point yang jelas"
+                question: "Berikut prosedur penyusunan inventaris arsip statis, kecuali ....",
+                answerText: "B: pemberian tunjuk silang"
             },
             {
                 id: 19,
-                question: "Beberapa teknik publikasi berikut ini perlu diperhatikan dalam melaksanakan pameran, kecuali ….",
-                answerText: "C: tingkat kecerdasan dan wawasan yang dituju"
+                question: "Jenis sarana bantu penemuan kembali arsip statis yang dibuat oleh lembaga kearsipan yang memuat daftar arsip statis dan disusun secara sistematis sesuai dengan pencipta arsip serta sekurang-kurangnya memuat indeks, struktur organisasi pencipta, dan riwayat hidup arsip, adalah ....",
+                answerText: "C: inventaris arsip statis"
             },
             {
                 id: 20,
-                question: "Melakukan identifikasi awal terhadap kegiatan dari uraian/rincian tugas unit kerja merupakan pendekatan untuk menyusun Standar Operasional Prosedur Administrasi Pemerintahan di bidang kearsipan yang bersifat ….",
-                answerText: "D: mikro"
+                question: "Di bawah ini adalah kegiatan perencanaan menghadapi bencana (disaster planning), kecuali ....",
+                answerText: "B: perawatan"
             },
             {
                 id: 21,
-                question: "Berikut ini termasuk dalam jenis Standard Operasional Prosedur Administrasi Pemerintahan di bidang kearsipan yang bersifat teknis adalah ….",
-                answerText: "B: SOP pemberkasan arsip aktif"
+                question: "Berikut ini merupakan kegiatan pengelolaan arsip statis, kecuali …. ",
+                answerText: "A: penilaian arsip"
             },
             {
                 id: 22,
-                question: "Prinsip dasar dalam menentukan tujuan dari pelaksanaan bimbingan teknis adalah ….",
-                answerText: "A: realistis sesuai dengan kebutuhan dan harapan dari peserta bimbingan teknis"
+                question: "Kegiatan yang dilakukan untuk mengetahui kondisi arsip yang disimpan agar dapat dipetakan kegiatan preservasinya adalah ....",
+                answerText: "A: risk assessment"
             },
             {
                 id: 23,
-                question: "Standar Operasional Prosedur dengan format tahapan berurutan (hierarchical steps) biasanya digunakan jika ….",
-                answerText: "A: prosedur yang disusun panjang, lebih dari 10 langkah, dan membutuhkan informasi lebih detail, akan tetapi hanya memerlukan sedikit pengambilan keputusan"
+                question: "Sarana bantu penemuan arsip statis berupa uraian deskripsi informasi yang sekurang-kurangnya memuat nomor arsip, bentuk redaksi, isi ringkas, kurun waktu penciptaan, tingkat perkembangan, jumlah, dan kondisi arsip disebut ….",
+                answerText: "D: daftar arsip statis"
             },
             {
                 id: 24,
-                question: "Pada PP 28 Tahun 2012, pembinaan kearsipan di tingkat provinsi, kabupaten/kota, perguruan tinggi meliputi hal-hal berikut ini, kecuali ….",
-                answerText: "C: penilaian kinerja Arsiparis"
+                question: "Berikut ini sarana penemuan arsip statis berupa susunan hasil deskripsi unit informasi arsip suatu kelompok/grup arsip secara menyeluruh, adalah ....",
+                answerText: "D: inventaris arsip"
             },
             {
                 id: 25,
-                question: "Fokus yang cocok digunakan dalam melaksanakan bimbingan teknis terhadap pengelola arsip yang berada di unit-unit pengolah, adalah ….",
-                answerText: "B: teknis pelaksanaan pengelolaan arsip pada suatu organisasi"
+                question: "Berikut ini ketahanan fisik media yang harus diperhatikan pada teknis penyimpanan arsip statis, kecuali ....",
+                answerText: "D: penataan arsip"
             },
             {
                 id: 26,
-                question: "Pada dasarnya Standar Operasional Prosedur Administrasi Pemerintahan di bidang kearsipan disusun berdasarkan ….",
-                answerText: "C: proses bisnis"
+                question: "Di bawah ini, yang bukan menjadi persyaratan Arsiparis untuk naik jabatan setingkat lebih tinggi adalah ....",
+                answerText: "B: kualifikasi pendidikan"
             },
             {
                 id: 27,
-                question: "Lembaga Kearsipan Pemerintah Provinsi, memiliki tanggung jawab dalam melakukan bimbingan teknis pengelolaan arsip dinamis kepada pencipta arsip berikut ini, kecuali ….",
-                answerText: "C: Lembaga Kearsipan Perguruan Tinggi Negeri di wilayah Pemerintah Provinsi"
+                question: "Kegiatan uji kompetensi atau sertifikasi Jabatan Fungsional Arsiparis dilakukan dengan mengacu kepada ....",
+                answerText: "D: standar kompetensi jabatan fungsional arsiparis"
             },
             {
                 id: 28,
-                question: "Berdasarkan sifat kegiatan, Standar Operasional Prosedur Administrasi Pemerintahan dapat dikategorikan dalam dua jenis antara lain ….",
-                answerText: "A: SOP Teknis dan SOP Administratif"
+                question: "Pembinaan kearsipan terhadap pencipta arsip di lingkungan daerah Kabupaten/Kota adalah ....",
+                answerText: "C: Perguruan Tinggi Negeri"
             },
             {
                 id: 29,
-                question: "Unsur inti dari Standar Operasional Prosedur Administrasi Pemerintahan di bidang kearsipan terdiri dari ….",
-                answerText: "C: identitas SOP dan prosedur SOP"
+                question: "Kegiatan dalam menilai kesesuaian antara prinsip, kaidah, dan standar kearsipan dengan penyelenggaraan kearsipan, adalah ....",
+                answerText: "A: pengawasan kearsipan"
             },
             {
                 id: 30,
-                question: "Perka ANRI Nomor 22 Tahun 2012 tentang Desain Pembinaan Kearsipan pada Pemerintahan Daerah menjelaskan bahwa ruang lingkup pembinaan kearsipan pada pemerintahan daerah meliputi ….",
-                answerText: "B: peran dan tanggung jawab, mekanisme serta program pembinaan kearsipan"
+                question: "Kegiatan pembinaan kearsipan oleh Arsiparis Penyelia adalah ....",
+                answerText: "D: melakukan penilaian kinerja arsiparis terampil dan arsiparis mahir"
             },
             {
                 id: 31,
-                question: "Menurut cakupan dan besaran kegiatan, Standar Operasional Prosedur dikategorikan ke dalam dua jenis, yaitu ….",
-                answerText: "D: makro dan mikro"
+                question: "Penilaian kinerja arsiparis merupakan tugas pokok bagi arsiparis dalam melakukan kegiatan ....",
+                answerText: "A: pembinaan kearsipan"
             },
             {
                 id: 32,
-                question: "Kegiatan bimbingan teknis kearsipan yang bersifat \"introductory\" dapat berupa ….",
-                answerText: "A: sosialisasi setengah hari dan materi berupa pengantar kearsipan dan penerapannya di lingkungan organisasi"
+                question: "Pembinaan internal dalam pengelolaan arsip di lingkungan pencipta arsip merupakan tanggung jawab ....",
+                answerText: "C: Unit Kearsipan"
             },
             {
                 id: 33,
-                question: "Berikut ini adalah prinsip-prinsip dalam penyusunan Standar Operasional Prosedur Administrasi Pemerintahan di bidang kearsipan, kecuali ….",
-                answerText: "A: komitmen"
+                question: "Peraturan Kepala Arsip Nasional Republik Indonesia tentang Pedoman Penilaian Prestasi Kerja Jabatan Fungsional Arsiparis adalah ....",
+                answerText: "B: nomor 5 Tahun 2017"
             },
             {
                 id: 34,
-                question: "Dalam kegiatan penataan arsip di SIKN dan JIKN, arsip yang ditata berdasarkan sistem pemberkasan atau dipelihara sebagai satu unit karena arsip-arsip tersebut dihasilkan dari penghimpunan atau pemberkasan yang sama, atau kesamaan kegiatan, memiliki bentuk/format yang sama atau karena beberapa keterkaitan lainnya yang muncul saat pembuatan, penerimaan atau penggunaannya disebut ....",
-                answerText: "B: Series"
+                question: "Berikut ini yang bukan merupakan materi kegiatan Bimbingan Teknis (BINTEK) Pengelolaan Arsip Vital adalah ....",
+                answerText: "A: pengelolaan arsip perbatasan"
+            },
+            {
+                id: 35,
+                question: "Aplikasi yang memuat tentang pengelolaan arsip dinamis yang digunakan dengan mekanisme bagi pakai antar instansi pemerintah disebut dengan ....",
+                answerText: "D: SRIKANDI"
+            },
+            {
+                id: 36,
+                question: "Hasil kerja melakukan penilaian prestasi kerja arsiparis, adalah ….",
+                answerText: "A: verifikasi penilaian prestasi kerja arsiparis"
+            },
+            {
+                id: 37,
+                question: "Melakukan bimbingan teknis (BINTEK) kearsipan termasuk ke dalam tugas pokok arsiparis pada kegiatan ....",
+                answerText: "C: pembinaan kearsipan"
+            },
+            {
+                id: 38,
+                question: "Persiapan pelaksanaan Bimbingan Teknis sebagai berikut, kecuali …. ",
+                answerText: "C: pembuatan inventaris bimbingan teknis"
+            },
+            {
+                id: 39,
+                question: "Kegiatan pelatihan atau pembelajaran yang ditujukan untuk memperdalam pengetahuan dan keterampilan dalam pengelolaan arsip disebut ….  ",
+                answerText: "B: bimbingan teknis kearsipan"
+            },
+            {
+                id: 40,
+                question: "Sasaran pemberikan Bimbingan Teknis (BINTEK) pengelolaan arsip statis yang kurang tepat yaitu ...",
+                answerText: "A: Arsiparis di Unit Kearsipan Kementerian/Lembaga Negara"
+            },
+            {
+                id: 41,
+                question: "Berikut ini manfaat menggunakan standar elemen data arsip Dinamis dan Statis untuk Penyelenggaraan Sistem Informasi Kearsipan Nasional (SIKN), kecuali ....",
+                answerText: "C: memungkinkan penggunaan data tunggal"
+            },
+            {
+                id: 42,
+                question: "Kegiatan pengolahan dan penyajian arsip menjadi informasi pada unit pengolah/satuan kerja, dilakukan terhadap ....",
+                answerText: "B: arsip aktif dan arsip vital"
+            },
+            {
+                id: 43,
+                question: "Peraturan tentang Sistem Pemerintahan Berbasis Elektronik (SPBE), adalah ....",
+                answerText: "D: Peraturan Presiden Nomor 95 Tahun 2018"
+            },
+            {
+                id: 44,
+                question: "Berikut ini persyaratan menjadi simpul jaringan, kecuali ....",
+                answerText: "B: memiliki daftar isi berkas"
+            },
+            {
+                id: 45,
+                question: "Berikut ini manfaat menggunakan standar elemen data arsip Dinamis dan Statis untuk Penyelenggaraan Sistem Informasi Kearsipan Nasional (SIKN), kecuali ....",
+                answerText: "C: memungkinkan penggunaan data tunggal."
             }
         ];
 
@@ -280,7 +335,7 @@
             const filtered = qaData.filter(item => {
                 const qText = item.question.toLowerCase();
                 return keywords.every(kw => qText.includes(kw));
-            }).slice(0, 2); // Limit to top 2 results for ultra-clean mobile priority
+            }).slice(0, 2); // Limit to top 1-2 results for ultra-clean mobile priority
 
             if (filtered.length === 0) {
                 resultsContainer.innerHTML = '';
@@ -291,18 +346,18 @@
             emptyState.classList.add('hidden');
 
             resultsContainer.innerHTML = filtered.map(item => `
-                <div class="bg-white rounded-xl p-4 border border-slate-200 shadow-sm">
-                    <p class="text-[11px] font-semibold text-indigo-600 mb-1">Soal Ujian</p>
-                    <h2 class="text-xs sm:text-sm font-medium text-slate-800 mb-3 leading-relaxed">
+                <div class="bg-white rounded-xl p-3.5 border border-slate-200 shadow-sm">
+                    <p class="text-[10px] font-semibold text-indigo-600 mb-1 uppercase tracking-wider">Soal Ujian</p>
+                    <h2 class="text-xs sm:text-sm font-medium text-slate-800 mb-2.5 leading-snug">
                         ${escapeHtml(item.question)}
                     </h2>
-                    <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-3 text-sm flex items-center">
-                        <svg class="h-5 w-5 text-emerald-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-2.5 flex items-center">
+                        <svg class="h-4 w-4 text-emerald-600 mr-2 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
                         </svg>
                         <div class="overflow-hidden">
-                            <span class="text-[10px] text-emerald-700 block font-semibold uppercase tracking-wider">Jawaban Benar:</span>
-                            <span class="text-emerald-900 font-bold text-sm sm:text-base block">${escapeHtml(item.answerText)}</span>
+                            <span class="text-[9px] text-emerald-700 block font-semibold uppercase tracking-wider">Jawaban Benar:</span>
+                            <span class="text-emerald-900 font-bold text-xs sm:text-sm block">${escapeHtml(item.answerText)}</span>
                         </div>
                     </div>
                 </div>
